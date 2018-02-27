@@ -44,8 +44,6 @@ public class TcpClient {
                         ch.pipeline().addLast(new StringDecoder());
                         ch.pipeline().addLast(new ClientHandler());
                         ch.pipeline().addLast(new StringEncoder());
-
-
                     }
                 });
         try {

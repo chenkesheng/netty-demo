@@ -85,6 +85,7 @@ public class DefaultFuture {
             future.setResponse(res);
             Condition condition = future.getCondition();
             if (condition != null) {
+                //await唤醒的信号
                 condition.signal();
             }
 
@@ -146,7 +147,6 @@ public class DefaultFuture {
     static class FutureTimeOutThread extends Thread {
         @Override
         public void run() {
-
             while (true) {
                 for (long futureId : FUTURES.keySet()) {
                     DefaultFuture f = FUTURES.get(futureId);

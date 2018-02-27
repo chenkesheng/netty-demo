@@ -60,8 +60,8 @@ public class NettyClient {
 //            eventLoopGroup.shutdownGracefully();
 //        }
 //    }
-    public static EventLoopGroup group = null;
-    public static Bootstrap bootstrap = null;
+    public static EventLoopGroup group;
+    public static Bootstrap bootstrap;
 
     static {
         group = new NioEventLoopGroup();
