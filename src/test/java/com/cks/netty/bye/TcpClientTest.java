@@ -6,7 +6,12 @@ import com.cks.netty.client.TcpClient;
 import com.cks.netty.param.Request;
 import com.cks.user.model.User;
 import org.junit.jupiter.api.Test;
-
+/**
+ * @Author: cks
+ * @Date: Created by 下午14:35 2018/2/27
+ * @Package: com.cks.netty.client
+ * @Description: client测试用例
+ */
 public class TcpClientTest {
 
 	@Test

@@ -10,14 +10,19 @@ import java.util.concurrent.locks.ReentrantLock;
 import com.cks.netty.param.Request;
 import com.cks.netty.param.Response;
 
-
+/**
+ * @Author: cks
+ * @Date: Created by 下午14:35 2018/2/27
+ * @Package: com.cks.netty.client
+ * @Description: 管理是否返回的信息
+ */
 public class DefaultFuture {
 
     private long id;
 
     private volatile Response response;
 
-    public final static Map<Long, DefaultFuture> FUTURES = new ConcurrentHashMap<Long, DefaultFuture>();
+    public final static Map<Long, DefaultFuture> FUTURES = new ConcurrentHashMap<>();
 
     private long timeout;
 
@@ -139,7 +144,6 @@ public class DefaultFuture {
     }
 
     static class FutureTimeOutThread extends Thread {
-
         @Override
         public void run() {
 

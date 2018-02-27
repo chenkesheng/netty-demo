@@ -7,6 +7,12 @@ import java.security.KeyStore;
 import javax.net.ssl.KeyManagerFactory;
 import javax.net.ssl.SSLContext;
 
+/**
+ * @Author: cks
+ * @Date: Created by 下午14:35 2018/2/27
+ * @Package: com.cks.netty.client
+ * @Description: SSLContext
+ */
 public class SSLContextFactory {
 
 	public static SSLContext getContext() {

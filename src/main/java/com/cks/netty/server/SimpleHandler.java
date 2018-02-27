@@ -16,7 +16,7 @@ import java.nio.charset.Charset;
  * @Author: cks
  * @Date: Created by 下午4:43 2018/2/16
  * @Package: com.cks.netty.server
- * @Description:
+ * @Description: netty服务端建议处理器
  */
 public class SimpleHandler extends ChannelInboundHandlerAdapter {
     @Override

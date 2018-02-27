@@ -18,6 +18,12 @@ import com.cks.netty.core.DefaultFuture;
 import com.cks.netty.param.Request;
 import com.cks.netty.param.Response;
 
+/**
+ * @Author: cks
+ * @Date: Created by 下午14:35 2018/2/27
+ * @Package: com.cks.netty.client
+ * @Description: TcpClient
+ */
 public class TcpClient {
     public static EventLoopGroup group;
     public static Bootstrap bootstrap;

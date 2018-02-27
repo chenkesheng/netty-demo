@@ -2,6 +2,12 @@ package com.cks.netty;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+/**
+ * @Author: cks
+ * @Date: Created by 下午14:35 2018/2/27
+ * @Package: com.cks.netty.client
+ * @Description: 启动类
+ */
 public class ServerMain {
     public static volatile boolean running = true;
 

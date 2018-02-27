@@ -2,6 +2,12 @@ package com.cks.netty;
 
 import java.lang.reflect.Method;
 
+/**
+ * @Author: cks
+ * @Date: Created by 下午4:43 2018/2/16
+ * @Package: com.cks.netty.server
+ * @Description: BeanMethod bean反射获取对应方法
+ */
 public class BeanMethod {
 	
 	private Object bean;

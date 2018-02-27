@@ -19,6 +19,12 @@ import io.netty.util.AttributeKey;
 
 import java.nio.charset.Charset;
 
+/**
+ * @Author: cks
+ * @Date: Created by 下午14:35 2018/2/27
+ * @Package: com.cks.netty.client
+ * @Description: NettyHttpClient
+ */
 public class NettyHttpClient {
     public static EventLoopGroup group;
     public static Bootstrap bootstrap;

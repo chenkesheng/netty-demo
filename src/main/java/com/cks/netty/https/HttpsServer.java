@@ -21,6 +21,12 @@ import org.springframework.context.event.ContextStartedEvent;
 import org.springframework.core.Ordered;
 import org.springframework.stereotype.Component;
 
+/**
+ * @Author: cks
+ * @Date: Created by 下午14:35 2018/2/27
+ * @Package: com.cks.netty.client
+ * @Description: HttpsServer
+ */
 @Component
 public class HttpsServer implements ApplicationListener<ContextStartedEvent>, Ordered {
 

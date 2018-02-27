@@ -2,7 +2,12 @@ package com.cks.netty.param;
 
 import java.util.concurrent.atomic.AtomicLong;
 
-
+/**
+ * @Author: cks
+ * @Date: Created by 下午14:35 2018/2/27
+ * @Package: com.cks.netty.client
+ * @Description: Request
+ */
 public class Request {
 
     private String command;

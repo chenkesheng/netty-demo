@@ -11,7 +11,7 @@ import io.netty.util.AttributeKey;
  * @Author: cks
  * @Date: Created by 下午9:41 2018/2/16
  * @Package: com.cks.netty.client
- * @Description:
+ * @Description: 客户端处理器
  */
 public class ClientHandler extends ChannelInboundHandlerAdapter {
     public void channelRead(ChannelHandlerContext context, Object msg) {

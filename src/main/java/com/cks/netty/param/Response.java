@@ -1,10 +1,19 @@
 package com.cks.netty.param;
 
+/**
+ * @Author: cks
+ * @Date: Created by 下午14:35 2018/2/27
+ * @Package: com.cks.netty.client
+ * @Description: Response
+ */
 public class Response {
 
     private long id;
+
     private Object content;
+
     private int status;//响应码，0表示成功，1表示失败
+
     private String msg;//响应信息
 
 

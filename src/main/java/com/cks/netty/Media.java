@@ -11,7 +11,7 @@ public class Media {
 	
 	public static Map<String,BeanMethod> beanMap;
 	static{
-		beanMap = new HashMap<String,BeanMethod>();
+		beanMap = new HashMap<>();
 	}
 	
 	

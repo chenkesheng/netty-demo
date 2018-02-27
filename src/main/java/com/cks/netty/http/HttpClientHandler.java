@@ -7,7 +7,12 @@ import io.netty.handler.codec.http.HttpResponse;
 import io.netty.handler.codec.http.HttpResponseStatus;
 
 import java.nio.charset.Charset;
-
+/**
+ * @Author: cks
+ * @Date: Created by 下午14:35 2018/2/27
+ * @Package: com.cks.netty.client
+ * @Description: HttpClientHandler
+ */
 public class HttpClientHandler extends ChannelInboundHandlerAdapter {
 
     @Override

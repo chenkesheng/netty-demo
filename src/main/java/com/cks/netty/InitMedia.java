@@ -11,7 +11,12 @@ import org.springframework.stereotype.Controller;
 
 import com.cks.netty.annotation.Action;
 
-
+/**
+ * @Author: cks
+ * @Date: Created by 下午14:35 2018/2/27
+ * @Package: com.cks.netty.client
+ * @Description: 初始化方法
+ */
 @Component
 public class InitMedia implements ApplicationListener<ContextRefreshedEvent>, Ordered {
 
