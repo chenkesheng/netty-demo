@@ -1,12 +1,14 @@
 package com.cks.netty.server;
 
+import com.alibaba.fastjson.JSONObject;
+import com.cks.netty.Media;
+import com.cks.netty.param.RequestParam;
+import com.cks.netty.param.Response;
 import io.netty.buffer.ByteBuf;
-import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelInboundHandlerAdapter;
 import io.netty.handler.timeout.IdleState;
 import io.netty.handler.timeout.IdleStateEvent;
-import io.netty.util.concurrent.EventExecutorGroup;
 
 import java.nio.charset.Charset;
 
@@ -18,26 +20,25 @@ import java.nio.charset.Charset;
  */
 public class SimpleHandler extends ChannelInboundHandlerAdapter {
     @Override
-    public void channelRead(ChannelHandlerContext ctx, Object msg)
-            throws Exception {
+    public void channelRead(ChannelHandlerContext ctx, Object msg) {
 
         System.out.println("开始读取数据============");
         if (msg instanceof ByteBuf) {
-            ByteBuf req = (ByteBuf)msg;
+            ByteBuf req = (ByteBuf) msg;
             String content = req.toString(Charset.defaultCharset());
             System.out.println(content);
-            System.out.println("开始发送数据============");
-            String name = "我是花蕾\r\n";
-            ctx.channel().writeAndFlush(name);
+//            System.out.println("开始发送数据============");
+//            String name = "我是花蕾\r\n";
+//            ctx.channel().writeAndFlush(name);
 
-//            RequestParam request = JSONObject.parseObject(content,RequestParam.class);
-//            Object result = Media.execute(request);
-//
-//            Response res = new Response();
-//            res.setId(request.getId());
-//            res.setContent(result);
-//            ctx.channel().write(JSONObject.toJSONString(res));
-//            ctx.channel().writeAndFlush("\r\n");
+            RequestParam request = JSONObject.parseObject(content, RequestParam.class);
+            Object result = Media.execute(request);
+
+            Response res = new Response();
+            res.setId(request.getId());
+            res.setContent(result);
+            ctx.channel().write(JSONObject.toJSONString(res));
+            ctx.channel().writeAndFlush("\r\n");
         }
 
 
@@ -59,23 +60,20 @@ public class SimpleHandler extends ChannelInboundHandlerAdapter {
 
 
     @Override
-    public void userEventTriggered(ChannelHandlerContext ctx, Object evt)
-            throws Exception {
-//
-//        if(evt instanceof IdleStateEvent){
-//            IdleStateEvent event = (IdleStateEvent)evt;
-//            if(event.equals(IdleState.READER_IDLE)){
-//                System.out.println("读空闲====");
-//                ctx.close();
-//            }else if(event.equals(IdleState.WRITER_IDLE)){
-//                System.out.println("写空闲====");
-//            }else if(event.equals(IdleState.WRITER_IDLE)){
-//                System.out.println("读写空闲====");
-//                ctx.channel().writeAndFlush("ping\r\n");
-//            }
-//
-//        }
-//
-//        super.userEventTriggered(ctx, evt);
+    public void userEventTriggered(ChannelHandlerContext ctx, Object evt) throws Exception {
+        if (evt instanceof IdleStateEvent) {
+            IdleStateEvent event = (IdleStateEvent) evt;
+            if (event.equals(IdleState.READER_IDLE)) {
+                System.out.println("读空闲====");
+                ctx.close();
+            } else if (event.equals(IdleState.WRITER_IDLE)) {
+                System.out.println("写空闲====");
+            } else if (event.equals(IdleState.WRITER_IDLE)) {
+                System.out.println("读写空闲====");
+                ctx.channel().writeAndFlush("ping\r\n");
+            }
+
+        }
+        super.userEventTriggered(ctx, evt);
     }
 }
