@@ -24,7 +24,6 @@ import com.cks.netty.param.RequestParam;
  */
 public class HttpsServerHandler extends ChannelInboundHandlerAdapter {
 
-
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
 
@@ -47,9 +46,5 @@ public class HttpsServerHandler extends ChannelInboundHandlerAdapter {
             e.printStackTrace();
             ctx.channel().writeAndFlush("");
         }
-
-
     }
-
-
 }

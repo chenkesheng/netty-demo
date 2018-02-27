@@ -30,8 +30,5 @@ public class HttpClientHandler extends ChannelInboundHandlerAdapter {
             System.out.println(result);
             ctx.channel().close();
         }
-
     }
-
-
 }

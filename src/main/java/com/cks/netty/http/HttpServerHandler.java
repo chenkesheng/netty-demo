@@ -24,7 +24,6 @@ import com.cks.netty.param.RequestParam;
  */
 public class HttpServerHandler extends ChannelInboundHandlerAdapter {
 
-
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) {
 
@@ -38,8 +37,11 @@ public class HttpServerHandler extends ChannelInboundHandlerAdapter {
 
                 DefaultFullHttpResponse response = new DefaultFullHttpResponse(HttpVersion.HTTP_1_1,
                         HttpResponseStatus.OK, Unpooled.wrappedBuffer(JSONObject.toJSONString(result).getBytes(Charset.defaultCharset())));
+                //请求的数据格式
                 response.headers().set(HttpHeaderNames.CONTENT_TYPE, "text/plain");
+                //返回字符串
                 response.headers().set(HttpHeaderNames.CONTENT_LENGTH, response.content().readableBytes());
+                //保持连接可用
                 response.headers().set(HttpHeaderNames.CONNECTION, HttpHeaderValues.KEEP_ALIVE);
                 ctx.channel().writeAndFlush(response);
             }
@@ -47,9 +49,5 @@ public class HttpServerHandler extends ChannelInboundHandlerAdapter {
             e.printStackTrace();
             ctx.channel().writeAndFlush("");
         }
-
-
     }
-
-
 }

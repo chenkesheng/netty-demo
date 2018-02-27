@@ -60,7 +60,7 @@ public class NettyHttpClient {
             Request request = new Request();
             request.setCommand("saveUser");
             User user = new User();
-            user.setAge("11");
+            user.setAge("24");
             user.setId(1);
             user.setName("张三");
             request.setContent(user);
@@ -74,14 +74,11 @@ public class NettyHttpClient {
             req.headers().set(HttpHeaderNames.CONTENT_LENGTH, req.content().readableBytes());
             req.headers().set(HttpHeaderNames.CONNECTION, HttpHeaderValues.KEEP_ALIVE);
 
-
             future.channel().writeAndFlush(req);
-
             future.channel().closeFuture().sync();
 
             Object result = future.channel().attr(AttributeKey.valueOf("ChannelKey")).get();
-            System.out.println(result);
-
+//            System.out.println(result);
 
         } catch (Exception e) {
             e.printStackTrace();

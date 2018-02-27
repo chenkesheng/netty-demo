@@ -14,6 +14,7 @@ import io.netty.handler.codec.http.HttpResponseEncoder;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextStartedEvent;
 import org.springframework.core.Ordered;
+import org.springframework.stereotype.Component;
 
 /**
  * @Author: cks

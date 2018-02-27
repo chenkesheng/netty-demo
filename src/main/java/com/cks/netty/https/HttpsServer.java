@@ -45,7 +45,7 @@ public class HttpsServer implements ApplicationListener<ContextStartedEvent>, Or
                             SSLContext context = SSLContextFactory.getContext();
                             SSLEngine engine = context.createSSLEngine();
                             engine.setUseClientMode(false);//设置服务器模式
-                            engine.setNeedClientAuth(false);
+                            engine.setNeedClientAuth(false);//客户端需要认证授权
                             ch.pipeline().addLast(new SslHandler(engine));
                             ch.pipeline().addLast(new HttpRequestDecoder());
                             ch.pipeline().addLast(new HttpObjectAggregator(1048576));
@@ -54,7 +54,7 @@ public class HttpsServer implements ApplicationListener<ContextStartedEvent>, Or
 
                         }
                     });
-            ChannelFuture future = serverBootstrap.bind(4050).sync();
+            ChannelFuture future = serverBootstrap.bind(8888).sync();
             future.channel().closeFuture().sync();
 
         } catch (Exception e) {
@@ -74,7 +74,7 @@ public class HttpsServer implements ApplicationListener<ContextStartedEvent>, Or
 
     @Override
     public int getOrder() {
-        return 1;
+        return 0;
     }
 
     @Override

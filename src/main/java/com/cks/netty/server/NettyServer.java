@@ -29,7 +29,7 @@ import java.util.concurrent.TimeUnit;
 //2、  ContextStartedEvent：当使用ConfigurableApplicationContext接口的start()方法启动ApplicationContext容器时触发该事件。
 //3、  ContextClosedEvent：当使用ConfigurableApplicationContext接口的close()方法关闭ApplicationContext容器时触发该事件。
 //4、  ContextStopedEvent: 当使用ConfigurableApplicationContext接口的stop()方法停止ApplicationContext容器时触发该事件。
-@Component
+//@Component
 public class NettyServer implements ApplicationListener<ContextStartedEvent>, Ordered {
     public void start() {
         EventLoopGroup parentGroup = new NioEventLoopGroup(3);
