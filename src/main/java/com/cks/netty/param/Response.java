@@ -3,7 +3,7 @@ package com.cks.netty.param;
 /**
  * @Author: cks
  * @Date: Created by 下午14:35 2018/2/27
- * @Package: com.cks.netty.client
+ * @Package: com.cks.netty.param
  * @Description: Response
  */
 public class Response {

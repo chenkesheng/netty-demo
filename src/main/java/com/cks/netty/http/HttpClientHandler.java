@@ -10,7 +10,7 @@ import java.nio.charset.Charset;
 /**
  * @Author: cks
  * @Date: Created by 下午14:35 2018/2/27
- * @Package: com.cks.netty.client
+ * @Package: com.cks.netty.http
  * @Description: HttpClientHandler
  */
 public class HttpClientHandler extends ChannelInboundHandlerAdapter {

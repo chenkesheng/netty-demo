@@ -19,7 +19,7 @@ import com.cks.netty.param.RequestParam;
 /**
  * @Author: cks
  * @Date: Created by 下午14:35 2018/2/27
- * @Package: com.cks.netty.client
+ * @Package: com.cks.netty.http
  * @Description: HttpServerHandler
  */
 public class HttpServerHandler extends ChannelInboundHandlerAdapter {

@@ -5,7 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 /**
  * @Author: cks
  * @Date: Created by 下午14:35 2018/2/27
- * @Package: com.cks.netty.client
+ * @Package: com.cks.netty
  * @Description: 启动类
  */
 public class ServerMain {

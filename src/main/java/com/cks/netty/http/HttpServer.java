@@ -19,7 +19,7 @@ import org.springframework.stereotype.Component;
 /**
  * @Author: cks
  * @Date: Created by 下午14:35 2018/2/27
- * @Package: com.cks.netty.client
+ * @Package: com.cks.netty.http
  * @Description: HttpServer
  */
 //@Component

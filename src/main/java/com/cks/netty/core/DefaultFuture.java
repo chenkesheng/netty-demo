@@ -13,7 +13,7 @@ import com.cks.netty.param.Response;
 /**
  * @Author: cks
  * @Date: Created by 下午14:35 2018/2/27
- * @Package: com.cks.netty.client
+ * @Package: com.cks.netty.core
  * @Description: 管理是否返回的信息
  */
 public class DefaultFuture {

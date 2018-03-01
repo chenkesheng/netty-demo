@@ -7,6 +7,12 @@ import java.util.Map;
 import com.alibaba.fastjson.JSONObject;
 import com.cks.netty.param.RequestParam;
 
+/**
+ * @Author: cks
+ * @Date: Created by 下午14:35 2018/2/27
+ * @Package: com.cks.netty
+ * @Description:
+ */
 public class Media {
 
     public static Map<String, BeanMethod> beanMap;

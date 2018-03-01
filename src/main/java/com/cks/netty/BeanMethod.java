@@ -5,7 +5,7 @@ import java.lang.reflect.Method;
 /**
  * @Author: cks
  * @Date: Created by 下午4:43 2018/2/16
- * @Package: com.cks.netty.server
+ * @Package: com.cks.netty
  * @Description: BeanMethod bean反射获取对应方法
  */
 public class BeanMethod {
