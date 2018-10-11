@@ -70,7 +70,5 @@ public class ReferenceTest {
         } else {
             System.out.println("no, i am dead :(");
         }
-
-
     }
 }
