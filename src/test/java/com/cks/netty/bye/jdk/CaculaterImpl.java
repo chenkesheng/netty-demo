@@ -8,7 +8,7 @@ package com.cks.netty.bye.jdk;
  */
 public class CaculaterImpl implements Caculator {
     @Override
-    public int substrct(int a, int b) {
+    public int subtract(int a, int b) {
         System.out.println("方法执行中");
         return a - b;
     }

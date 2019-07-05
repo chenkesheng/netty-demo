@@ -7,5 +7,5 @@ package com.cks.netty.bye.jdk;
  * @Description:
  */
 public interface Caculator {
-    int substrct(int a,int b);
+    int subtract(int a,int b);
 }
