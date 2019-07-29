@@ -18,6 +18,9 @@ public class ExecutorDemo {
     public static void main(String[] args) {
 
         System.out.println(Runtime.getRuntime().availableProcessors());
+
+        ThreadPoolExecutor poolExecutor = new ThreadPoolExecutor(10, 100, 10L, TimeUnit.DAYS, new ArrayBlockingQueue<>(10));
+
         //固定大小的线程池
         ExecutorService pool = Executors.newFixedThreadPool(10);
 
@@ -55,8 +58,8 @@ public class ExecutorDemo {
         list.add("a");
         list.add("b");
         int a = 0;
-        for (String array : list){
-            if (array.equals("a")){
+        for (String array : list) {
+            if (array.equals("a")) {
                 a++;
             }
         }

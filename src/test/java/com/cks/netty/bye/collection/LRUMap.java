@@ -19,7 +19,7 @@ public class LRUMap<K, V> extends LinkedHashMap<K, V> {
      * @param maxSize
      */
     public LRUMap(int maxSize) {
-        super(maxSize + 1, 1.0f, false);
+        super(maxSize + 1, 1.0f, true);
         this._maxSize = maxSize;
     }
 
