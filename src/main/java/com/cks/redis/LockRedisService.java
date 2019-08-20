@@ -30,7 +30,7 @@ public class LockRedisService {
     LockRedis lockRedis = new LockRedis(pool);
 
     public void seckill() {
-        String identifier = lockRedis.getRedisLock("cks", 5000l, 5000l);
+        String identifier = lockRedis.getRedisLock("cks", 5000L, 5000L);
         if (StringUtils.isEmpty(identifier)) {
             // 获取锁失败
             System.out.println(Thread.currentThread().getName() + ",获取锁失败，原因时间超时!!!");
