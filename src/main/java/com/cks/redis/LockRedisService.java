@@ -29,7 +29,7 @@ public class LockRedisService {
 
     LockRedis lockRedis = new LockRedis(pool);
 
-    public void seckill() {
+    public void setKill() {
         String identifier = lockRedis.getRedisLock("cks", 5000L, 5000L);
         if (StringUtils.isEmpty(identifier)) {
             // 获取锁失败

@@ -26,6 +26,6 @@ class ThreadRedis extends Thread {
 
     @Override
     public void run() {
-        lockRedisService.seckill();
+        lockRedisService.setKill();
     }
 }
